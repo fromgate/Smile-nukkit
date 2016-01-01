@@ -1,0 +1,11 @@
+cmd_reload: Настройки перезагружены
+cmd_perm_req: 'Вам запрещено запускать эту команду!'
+lng_load_fail: Failed to load languages from file. Default message used
+lng_save_fail: 'Не удалось сохранить файл перевода'
+lng_print_fail: 'Не удалось отобразить сообщение %1%. Получатель не существует (null)'
+lng_config: '[MESSAGES] Сообщений: %1% Язык: %2% Сохранение переводаSave translate file: %1% Режим отладки: %3%'
+word_unknown: Неизвестно
+smiley_list: Перечень смайлов
+smiley_list_footer: Страница [%1% / [%2%]
+smiley_list_empty: Смайлики не найдены
+reloaded: Настройки перезагружены!

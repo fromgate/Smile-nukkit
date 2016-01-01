@@ -1,0 +1,13 @@
+name: Smiley
+main: ru.nukkit.smiley.Smiley
+version: "0.0.2"
+author: fromgate, nukkit.ru
+api: ["1.0.0"]
+description: Add smileys to your chat!
+commands:
+   smile:
+      description: Smiley command
+      usage: |
+           /smile - displays current configurations
+           /smile list [page] - displays available smileys
+           /smile reload - reload configuration and smileys
