@@ -129,7 +129,7 @@ public class Smileys {
 			smiles.clear();
             Config cfg = new Config(f);
             for (String key : cfg.getAll().keySet())
-                add (key, (String) cfg.getNested(key,key));
+                add (key, (String) cfg.getString(key,key));
 		} catch (Exception e){
 			e.printStackTrace();
 		}
@@ -163,7 +163,7 @@ public class Smileys {
 			if (smiles.isEmpty()) return;
 			Config sml = new Config(f);
 			for (String key : smiles.keySet())
-				sml.setNested(key, Smiley.getPlugin().saveEncoded ? stringToHex(smiles.get(key)): smiles.get(key));
+				sml.set(key, Smiley.getPlugin().saveEncoded ? stringToHex(smiles.get(key)): smiles.get(key));
 			sml.save();
 		} catch (Exception e){
 			e.printStackTrace();

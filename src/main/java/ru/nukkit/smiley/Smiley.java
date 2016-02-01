@@ -49,28 +49,28 @@ public class Smiley extends PluginBase {
 
 	public void loadCfg(){
 		Config cfg = this.getConfig();
-		smileconsole = cfg.getNested("smiley.console",true);
-		smilecmd = cfg.getNested("smiley.commands",true);
-		colorsmiles = cfg.getNested("smiley.colors",true); 
-		smilesign = cfg.getNested("smiley.sign.enable-smileys",true);
-		signcolor = cfg.getNested("smiley.sign.colored-smileys",false);
+		smileconsole = cfg.getBoolean("smiley.console",true);
+		smilecmd = cfg.getBoolean("smiley.commands",true);
+		colorsmiles = cfg.getBoolean("smiley.colors",true);
+		smilesign = cfg.getBoolean("smiley.sign.enable-smileys",true);
+		signcolor = cfg.getBoolean("smiley.sign.colored-smileys",false);
 		//smilebook = cfg.getNested("smiley.book.enable-smileys",true);
 		//bookcolor = cfg.getNested("smiley.book.colored-smileys",true);
         //bookcolorize = cfg.getNested("smiley.book.colorize-text",true);
-		default_color = cfg.getNested("smiley.default-chat-color","&f");
+		default_color = cfg.getString("smiley.default-chat-color","&f");
 	}
 
 	private void saveCfg(){
 		Config cfg = this.getConfig();
-		cfg.setNested("smiley.console",smileconsole);
-		cfg.setNested("smiley.commands",smilecmd);
-		cfg.setNested("smiley.colors",colorsmiles);
-		cfg.setNested("smiley.sign.enable-smileys",smilesign);
-		cfg.setNested("smiley.sign.colored-smileys",signcolor);
+		cfg.set("smiley.console",smileconsole);
+		cfg.set("smiley.commands",smilecmd);
+		cfg.set("smiley.colors",colorsmiles);
+		cfg.set("smiley.sign.enable-smileys",smilesign);
+		cfg.set("smiley.sign.colored-smileys",signcolor);
 		//cfg.setNested("smiley.book.enable-smileys",smilebook);;
         //cfg.setNested("smiley.book.colored-smileys",bookcolor);;
         //cfg.setNested("smiley.book.colorize-text",bookcolorize);;
-		cfg.setNested("smiley.default-chat-color",default_color );
+		cfg.set("smiley.default-chat-color",default_color );
 		this.saveConfig();
 	}
 	public static Smiley getPlugin() {
